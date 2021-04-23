@@ -1,6 +1,5 @@
-package com.example.workmanager.ui.main
+package com.example.workmanager.main
 
-import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.os.StatFs
@@ -10,8 +9,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
-import androidx.work.WorkRequest
-import androidx.work.Worker
 import com.example.workmanager.R
 import kotlinx.android.synthetic.main.main_fragment.view.*
 import java.util.concurrent.TimeUnit

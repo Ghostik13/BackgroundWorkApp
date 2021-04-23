@@ -1,11 +1,11 @@
-package com.example.workmanager
+package com.example.workmanager.main
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.workmanager.ui.main.MainFragment
+import com.example.workmanager.R
 
 
 const val CHANNEL_ID = "channelId"

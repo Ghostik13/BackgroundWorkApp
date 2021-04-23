@@ -1,4 +1,4 @@
-package com.example.workmanager.ui.main
+package com.example.workmanager.main
 
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,6 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import com.example.workmanager.CHANNEL_ID
 import com.example.workmanager.R
 
 class BatteryWorker(appContext: Context, workerParams: WorkerParameters) :

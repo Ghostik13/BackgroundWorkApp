@@ -1,16 +1,12 @@
-package com.example.workmanager.ui.main
+package com.example.workmanager.main
 
 import android.content.Context
-import android.content.Intent
-import android.content.IntentFilter
-import android.os.BatteryManager
 import android.os.Environment
 import android.os.StatFs
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import com.example.workmanager.CHANNEL_ID
 import com.example.workmanager.R
 
 class StorageWorker(appContext: Context, workerParams: WorkerParameters) :

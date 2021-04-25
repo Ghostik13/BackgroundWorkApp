@@ -20,7 +20,7 @@ class StorageWorker(appContext: Context, workerParams: WorkerParameters) :
     private fun notificationCreate() {
         val notification = NotificationCompat.Builder(applicationContext, CHANNEL_ID)
             .setContentTitle("Storage")
-            .setContentText("Available storage is " + getAvailableInternalMemorySize()+" MB")
+            .setContentText("Available storage: " + getAvailableInternalMemorySize()+" MB")
             .setSmallIcon(R.drawable.ic_baseline_sd_storage_24)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
 

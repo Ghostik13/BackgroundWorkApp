@@ -1,7 +1,6 @@
 package com.example.workmanager.main
 
 import android.Manifest
-import android.annotation.SuppressLint
 import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
@@ -12,9 +11,6 @@ import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 import com.example.workmanager.R
-import kotlinx.coroutines.*
-import java.lang.Exception
-import java.lang.String.format
 import java.util.*
 
 class LocationService : Service() {
@@ -85,22 +81,20 @@ class LocationService : Service() {
         }
     }
 
-
-    private fun createNotification(coordinates: String) {
+    private fun createNotification(address: String) {
         val pendingIntent: PendingIntent =
             Intent(this, MainFragment::class.java).let { notificationIntent ->
                 PendingIntent.getActivity(this, 0, notificationIntent, 0)
             }
         val notification = NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("Location")
-            .setContentText(coordinates)
+            .setContentText(address)
             .setSmallIcon(R.drawable.ic_baseline_location_on_24)
             .setContentIntent(pendingIntent)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .build()
         startForeground(1, notification)
     }
-
 
     private fun getGeo(location: Location): String {
         val addresses: List<Address>
@@ -118,15 +112,5 @@ class LocationService : Service() {
         ) {
             createNotification(getGeo(location))
         }
-    }
-
-    @SuppressLint("DefaultLocale")
-    private fun formatLocation(location: Location?): String {
-        return if (location == null) ""
-        else format(
-            "Coordinates: lat = %1$.4f, lon = %2$.4f",
-            location.latitude,
-            location.longitude
-        )
     }
 }

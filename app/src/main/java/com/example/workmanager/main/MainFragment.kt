@@ -1,9 +1,5 @@
 package com.example.workmanager.main
 
-import android.annotation.SuppressLint
-import android.app.AlarmManager
-import android.app.PendingIntent
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,12 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.work.OneTimeWorkRequestBuilder
-import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import com.example.workmanager.R
 import kotlinx.android.synthetic.main.main_fragment.view.*
-import java.util.*
-import java.util.concurrent.TimeUnit
 
 class MainFragment : Fragment() {
 

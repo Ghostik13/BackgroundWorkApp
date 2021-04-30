@@ -24,9 +24,10 @@ class BatteryWorker(appContext: Context, workerParams: WorkerParameters) :
             .setContentText("The charge is " + batteryLevel())
             .setSmallIcon(R.drawable.ic_baseline_battery_charging_full_24)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .build()
 
         with(NotificationManagerCompat.from(applicationContext)) {
-            notify(1, notification.build())
+            notify(1, notification)
         }
     }
 
